@@ -16,6 +16,8 @@ DO NOT USE CROSS CABLE (both ends Male).
 I have used _LogiLink USB2.0 to Serial Adapter_ to connect this project to my PC. No drivers were required for Linux. System detected a new serial port at `/dev/ttyUSB0`. Which can also be checked via `sudo dmesg`,
 after plugging in USB end of the adapter to PC.
 
+EDIT: DTR line during normal operation has positive voltage >4V (measured on DB-9 socket pin). When Serial port is open it temporarily drops to a negative voltage. We use that to trigger reset operation on ATmega chip.
+
 ![On Breadboard](./docs/breadboard.png)
 
 # References
